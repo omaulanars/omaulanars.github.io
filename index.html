@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -43,7 +44,7 @@
     <section class="jumbotron text-center">
       <img src="img/profil.jpg" alt="Omar Maulana" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Omar Maulana</h1>
-      <p class="lead">XI-RPL 3 | 12</p>
+      <p class="lead">XI-PPLG 3 | 12</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="rgb(255, 255, 255)"
@@ -64,10 +65,13 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil impedit animi iusto? Molestiae, similique? Adipisci voluptatum ex nobis est atque.</p>
+            <p>Halo👋 Perkenalkan, Saya Omar Maulana Rafay Syahmi, biasa dipanggil Omar. Saya lahir di Malang dan saat ini berusia 16 tahun. Saya merupakan seorang siswa di SMKN 5 Malang dengan jurusan Rekayasa Perangkat Lunak (RPL).</p>
           </div>
           <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eius placeat expedita, sapiente tempora itaque tenetur molestiae nostrum veniam, voluptatem nisi aliquam maiores deserunt culpa!</p>
+            <p>
+              Saya memiliki beberapa hobi yang menarik. Salah satunya adalah berenang, yang tidak hanya menyegarkan tetapi juga menyehatkan. Saya juga tertarik melihat berbagai jenis bus, mulai dari desain hingga rutenya, yang selalu
+              menarik perhatian saya.
+            </p>
           </div>
         </div>
       </div>
@@ -92,25 +96,33 @@
         <div class="row">
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/s1.jpg" class="card-img-top" alt="Super1" />
+              <img src="img/ss.jpg" class="card-img-top" alt="Super1" />
               <div class="card-body">
-                <p class="card-text">1</p>
+                <p class="card-text">Project dari guru tamu yang berasal dari UBIG</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/s2.jpg" class="card-img-top" alt="Super2" />
+              <img src="img/s4.png" class="card-img-top" alt="Super2" />
               <div class="card-body">
-                <p class="card-text">2</p>
+                <p class="card-text">Project tugas akhir game PY</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/s3.jpg" class="card-img-top" alt="Super3" />
+              <img src="img/s5.png" class="card-img-top" alt="Super2" />
               <div class="card-body">
-                <p class="card-text">3</p>
+                <p class="card-text">Project tugas akhir PY Dekstop</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/s6.png" class="card-img-top" alt="Super2" />
+              <div class="card-body">
+                <p class="card-text">Project tugas akhir WEB</p>
               </div>
             </div>
           </div>
@@ -136,20 +148,29 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terimakasih!</strong> Pesan anda sudah kami terima.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="WPU-Contact-Form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -166,14 +187,43 @@
 
     <!-- Footer -->
     <footer class="shadow-sm text-center pb-5" style="background-color: #8635ff">
-      <p>
-        <a href="https://www.instagram.com/omaulanars/" class="text-white fw-bold">First | </a>
-        <a href="https://www.instagram.com/mar.py/" class="text-white fw-bold">Second | </a>
-        <a href="https://www.instagram.com/sahabat_superfortress003/" class="text-white fw-bold">Unit</a>
+      <p class="text-white fw-bold">
+        Contact Me
+        <br />
+        <a href="https://www.instagram.com/omaulanars/" class="text-white fw-bold bi bi-instagram" style="font-size: 20px"> | </a>
+        <a href="https://wa.me/6281232167010" class="text-white fw-bold bi bi-whatsapp" style="font-size: 20px"> </a>
       </p>
     </footer>
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwVdqcBvv44YA7GmnaRRD6ntK5xSOSpK88VTXRnn746fXU5SVI-jZg2EDJUeOZ4UEJT/exec";
+      const form = document.forms["WPU-Contact-Form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // ketika tombol submit diklik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // tampilkan alert
+            myAlert.classList.toggle("d-none");
+            // reset formnya
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
